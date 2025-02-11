@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 
 
 const ServiceCard = ({service}) => {
     // console.log(service)
-    const {image,service_name,category,pricing,counselor} = service;
+    const {image,service_name,category,pricing,counselor,id} = service;
     return (
         <>
         <div className="card  bg-base-100 shadow-xl rounded-2xl overflow-hidden mt-12">
@@ -14,9 +15,11 @@ const ServiceCard = ({service}) => {
           <p className="text-sm text-gray-500">{category}</p>
           <p className="text-lg font-semibold text-gray-800 mt-2">${pricing}</p>
           <p className="text-sm text-gray-600">Counselor: {counselor}</p>
+          <NavLink to={`/details/${id}`}>
           <div className="card-actions mt-4">
             <button className="btn btn-primary w-full">Learn More</button>
           </div>
+          </NavLink>
         </div>
       </div>
       </>

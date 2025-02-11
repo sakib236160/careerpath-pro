@@ -6,6 +6,7 @@ import { Profiler } from "react";
 import Services from "../components/Services/Services";
 import Profile from "../components/Profile/Profile";
 import Features from "../components/Features/Features";
+import Details from "../components/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,18 @@ const router = createBrowserRouter([
             {
                 path:'/features',
                 element:<Features></Features>
+            },
+            {
+                path:'/details/:id',
+                element:<Details></Details>,
+                loader: async ({params})=>{
+                    const res = await fetch("/service.json")
+                    const data = await res.json()
+                    // console.log(data,params.id)
+                    const singleData = data.find(d=>d.id == params.id)
+                    // console.log(singleData);
+                    return singleData;
+                }
             }
         ]
     }
