@@ -31,7 +31,7 @@ const slides = [
 
 const Banner = () => {
   return (
-    <div className="relative h-screen max-w-screen-xl mx-auto">
+    <div className="relative h-screen max-w-screen-xl mx-auto mt-6">
       <Swiper
         effect={"fade"}
         navigation
@@ -43,7 +43,7 @@ const Banner = () => {
           <SwiperSlide key={slide.id}>
             <div className="relative h-full">
               <img
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-lg"
                 src={slide.img}
                 alt={slide.title}
               />
