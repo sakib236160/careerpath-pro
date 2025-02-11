@@ -1,7 +1,7 @@
 
 
 const ServiceCard = ({service}) => {
-    console.log(service)
+    // console.log(service)
     const {image,service_name,category,pricing,counselor} = service;
     return (
         <>
