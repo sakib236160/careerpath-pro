@@ -1,9 +1,10 @@
+import Banner from "../Banner/Banner";
 
 
 const Home = () => {
     return (
-        <div className="text-6xl text-red-400">
-            I am Home Component
+        <div className="max-w-screen-xl mx-auto">
+            <Banner></Banner>
         </div>
     );
 };

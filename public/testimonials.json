@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "image": "https://i.ibb.co/testimonial1.jpg",
+      "feedback": "The career counseling sessions helped me choose the right path. Highly recommended!",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Robert Smith",
+      "image": "https://i.ibb.co/testimonial2.jpg",
+      "feedback": "The resume review service was excellent! I got more interview calls after making the suggested changes.",
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "Sophia Lee",
+      "image": "https://i.ibb.co/testimonial3.jpg",
+      "feedback": "The LinkedIn optimization service helped me land a job in my dream company. Thank you!",
+      "rating": 4.9
+    }
+  ]
+  
