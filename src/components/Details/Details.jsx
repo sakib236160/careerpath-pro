@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { authContext } from "../AuthProvider/AuthProvider";
 // import Modal from "../Modal/Modal";
 
 const Details = () => {
     const { image, service_name, category, description, pricing, duration, counselor, rating } = useLoaderData();
+
+    const contextValue = useContext(authContext)
+    console.log(contextValue);
 
     return (
         <div>

@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../components/MainLayout/MainLayout";
 import Home from "../components/Home/Home";
-import About from "../components/Profile/Profile";
-import { Profiler } from "react";
 import Services from "../components/Services/Services";
 import Profile from "../components/Profile/Profile";
 import Features from "../components/Features/Features";
 import Details from "../components/Details/Details";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
             },
             {
                 path:'/details/:id',
-                element:<Details></Details>,
+                element:<PrivateRoute>
+                    <Details></Details>
+                </PrivateRoute>,
                 loader: async ({params})=>{
                     const res = await fetch("/service.json")
                     const data = await res.json()
@@ -50,6 +53,14 @@ const router = createBrowserRouter([
                     // console.log(singleData);
                     return singleData;
                 }
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }
