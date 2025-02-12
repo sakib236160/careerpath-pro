@@ -40,7 +40,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <NavLink 
-                                    to="/profile" 
+                                    to="/my-profile" 
                                     className={({ isActive }) => isActive ? "text-blue-600 dark:text-blue-500 underline" : "text-gray-900 dark:text-white hover:underline"}
                                 >
                                     My Profile

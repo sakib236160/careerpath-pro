@@ -32,9 +32,17 @@ const router = createBrowserRouter([
                 element:<Services></Services>,
                 loader:()=> fetch("/service.json")
             },
+            // {
+            //     path:'/profile',
+            //     element:<Profile></Profile>
+            // },
             {
-                path:'/profile',
-                element:<Profile></Profile>
+                path: '/my-profile',
+                element: (
+                    <PrivateRoute>
+                        <Profile />
+                    </PrivateRoute>
+                )
             },
             {
                 path:'/features',
