@@ -2,6 +2,8 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import FeedBack from "../FeedBack/FeedBack";
+import CareerTips from "../CareerTips/CareerTips";
+import SuccessStories from "../SuccessStories/SuccessStories";
 
 const Home = () => {
   const services = useLoaderData();
@@ -39,6 +41,8 @@ const Home = () => {
       </div>
 
       <FeedBack feedBackData={feedBackData}></FeedBack>
+      <CareerTips></CareerTips>
+      <SuccessStories></SuccessStories>
     </div>
   );
 };
