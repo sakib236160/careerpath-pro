@@ -97,18 +97,7 @@ const Navbar = () => {
                   Service
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="/my-profile"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "text-blue-600 dark:text-blue-500 underline"
-                      : "text-gray-900 dark:text-white hover:underline"
-                  }
-                >
-                  My Profile
-                </NavLink>
-              </li>
+             
               <li>
                 <NavLink
                   to="/features"
@@ -119,6 +108,18 @@ const Navbar = () => {
                   }
                 >
                   Features
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/my-profile"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-blue-600 dark:text-blue-500 underline"
+                      : "text-gray-900 dark:text-white hover:underline"
+                  }
+                >
+                  My Profile
                 </NavLink>
               </li>
             </ul>

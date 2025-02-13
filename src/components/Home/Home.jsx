@@ -5,6 +5,7 @@ import FeedBack from "../FeedBack/FeedBack";
 import CareerTips from "../CareerTips/CareerTips";
 import SuccessStories from "../SuccessStories/SuccessStories";
 
+
 const Home = () => {
   const services = useLoaderData();
   //   console.log(services);
@@ -12,6 +13,7 @@ const Home = () => {
   return (
     <div className="max-w-screen-xl mx-auto">
       <Banner></Banner>
+     
 
       <div className="text-center mt-12">
         <h1 className="text-3xl font-bold">Our Professional Services</h1>
