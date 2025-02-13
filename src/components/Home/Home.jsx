@@ -43,7 +43,20 @@ const Home = () => {
       </div>
 
       <FeedBack feedBackData={feedBackData}></FeedBack>
+
+      <div className="text-center mt-12">
+        <h1 className="text-3xl font-bold">Career Tips & Advice</h1>
+        <p className="text-gray-600 mt-2">
+        Get expert tips and insights to boost your career growth.
+        </p>
+      </div>
       <CareerTips></CareerTips>
+      <div className="text-center mt-12">
+        <h1 className="text-3xl font-bold">Success Stories</h1>
+        <p className="text-gray-600 mt-2">
+        Be inspired by real stories of people who achieved their dream careers.
+        </p>
+      </div>
       <SuccessStories></SuccessStories>
     </div>
   );

@@ -4,7 +4,7 @@ const SuccessStories = () => {
   return (
     <div>
       <section className="bg-green-100 p-6 my-12 rounded-lg">
-        <h2 className="text-2xl font-bold text-center mb-4">Success Stories</h2>
+        <h2 className="text-2xl font-bold text-start underline mb-4">Success Stories</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border p-4 rounded-lg shadow-lg">
             <h3 className="text-lg font-semibold">Sakib Hossain</h3>

@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import Modal from '../Modal/Modal';
 import Footer from '../Footer/Footer';
 import PageHeader from '../PageHeader/PageHeader';
+import { ToastContainer } from 'react-toastify';
 
 const MainLayout = () => {
     return (
@@ -12,6 +13,7 @@ const MainLayout = () => {
             <PageHeader></PageHeader>
             <Outlet></Outlet>
             <Modal></Modal>
+            <ToastContainer position="top-right" autoClose={3000} />
             <Footer></Footer>
         </div>
     );
