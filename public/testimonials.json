@@ -1,22 +1,22 @@
 [
     {
       "id": 1,
-      "name": "Alice Johnson",
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "name": "Sakib Hossain",
+      "image": "https://i.ibb.co.com/FLKmB0Hg/SAKIB-HOSSAIN.jpg",
       "feedback": "The career counseling sessions helped me choose the right path. Highly recommended!",
       "rating": 5
     },
     {
       "id": 2,
-      "name": "Robert Smith",
-      "image": "https://i.ibb.co/testimonial2.jpg",
+      "name": "Ety Khatun",
+      "image": "https://i.ibb.co.com/cSrkW1C3/Ety-Khatun.jpg",
       "feedback": "The resume review service was excellent! I got more interview calls after making the suggested.",
       "rating": 4.8
     },
     {
       "id": 3,
-      "name": "Sophia Lee",
-      "image": "https://i.ibb.co/testimonial3.jpg",
+      "name": "Al-Amin",
+      "image": "https://i.ibb.co.com/ZpgH3Sb3/al-amin.jpg",
       "feedback": "The LinkedIn optimization service helped me land a job in my dream company. Thank you!",
       "rating": 4.9
     }

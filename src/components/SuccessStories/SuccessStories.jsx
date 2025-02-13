@@ -1,13 +1,26 @@
-import React from "react";
+import { UserIcon } from "lucide-react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SuccessStories = () => {
+    useEffect(() => {
+    AOS.init({ duration: 3000, once: true }); 
+  }, []);
   return (
     <div>
-      <section className="bg-green-100 p-6 my-12 rounded-lg">
-        <h2 className="text-2xl font-bold text-start underline mb-4">Success Stories</h2>
+      <section className="bg-white p-6 my-12 shadow-lg rounded-lg">
+        <h2 className="text-2xl font-bold text-start underline mb-4" data-aos="fade-up">
+          Success Stories
+        </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="border p-4 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold">Sakib Hossain</h3>
+          <div className="border p-4 rounded-lg " data-aos="fade-right">
+            <h3 className="text-lg font-semibold mb-3">
+              <span className="flex items-center gap-2 text-gray-700">
+                <UserIcon size={20} className="text-blue-500" />
+                Sakib Hossain
+              </span>
+            </h3>
             <p>
               "Success Story of a Software Engineer"---------- Once, a software
               engineer who was new to coding and technology started working at a
@@ -16,8 +29,13 @@ const SuccessStories = () => {
               learned something from every challenge.
             </p>
           </div>
-          <div className="border p-4 rounded-lg shadow-lg">
-            <h3 className="text-lg font-semibold">Ety Khatun</h3>
+          <div className="border p-4 rounded-lg" data-aos="fade-left">
+            <h3 className="text-lg font-semibold mb-3">
+              <span className="flex items-center gap-2 text-gray-700">
+                <UserIcon size={20} className="text-blue-500" />
+                Ety Khatun
+              </span>
+            </h3>
             <p>
               "Experience of Building a Career as a Digital Marketer"--------
               Building a career as a digital marketer involves a blend of

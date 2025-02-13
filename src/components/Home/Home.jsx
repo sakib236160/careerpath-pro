@@ -16,7 +16,7 @@ const Home = () => {
      
 
       <div className="text-center mt-12">
-        <h1 className="text-3xl font-bold">Our Professional Services</h1>
+        <h1 className="text-3xl font-bold"><span className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] bg-clip-text text-transparent font-bold">Our Professional</span> Services</h1>
         <p className="text-gray-600 mt-2">
           Get expert guidance in various fields to elevate your career and
           skills.
@@ -28,14 +28,14 @@ const Home = () => {
           <ServiceCard service={service}></ServiceCard>
         ))}
       </div>
-      <div className="flex justify-center mt-8">
-        <NavLink to={"/service"} className="btn btn-primary">
-          Show More
+      <div className="flex justify-start mt-8">
+        <NavLink to={"/service"} className="">
+          <span className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] bg-clip-text text-transparent font-bold text-2xl">Show More</span> 
         </NavLink>
       </div>
 
       <div className="text-center mt-12">
-        <h1 className="text-3xl font-bold">What Our Clients Say</h1>
+        <h1 className="text-3xl font-bold">What Our <span className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] bg-clip-text text-transparent font-bold">Clients</span> Say</h1>
         <p className="text-gray-600 mt-2">
           Hear from our satisfied clients about their experiences and success
           stories.
@@ -45,14 +45,14 @@ const Home = () => {
       <FeedBack feedBackData={feedBackData}></FeedBack>
 
       <div className="text-center mt-12">
-        <h1 className="text-3xl font-bold">Career Tips & Advice</h1>
+        <h1 className="text-3xl font-bold"><span className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] bg-clip-text text-transparent font-bold">Career Tips</span> & Advice</h1>
         <p className="text-gray-600 mt-2">
         Get expert tips and insights to boost your career growth.
         </p>
       </div>
       <CareerTips></CareerTips>
       <div className="text-center mt-12">
-        <h1 className="text-3xl font-bold">Success Stories</h1>
+        <h1 className="text-3xl font-bold"><span className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] bg-clip-text text-transparent font-bold">Success</span> Stories</h1>
         <p className="text-gray-600 mt-2">
         Be inspired by real stories of people who achieved their dream careers.
         </p>

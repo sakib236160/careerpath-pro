@@ -1,35 +1,37 @@
 [
     {
       "id": 1,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/vxzrjdWX/01.jpg",
       "service_name": "Career Counseling Sessions",
       "category": "Online",
       "description": "One-on-one career counseling sessions with industry experts to help you make informed career decisions.",
-      "pricing": "$50 per session",
+      "pricing": "50 per session",
       "duration": "05-12-24 5-6pm",
       "counselor": "John Doe",
       "rating": 4.8,
-      "learn_more": "/services/1"
+      "learn_more": "/services/1",
+      "status": "online"
     },
     {
       "id": 2,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/Fk4HHfMy/o2.jpg",
       "service_name": "Resume Review",
       "category": "Online",
       "description": "Professional resume review service to enhance your chances of landing your dream job.",
-      "pricing": "$30 per review",
+      "pricing": "30 per review",
       "duration": "Available Anytime",
       "counselor": "Jane Smith",
       "rating": 4.7,
-      "learn_more": "/services/2"
+      "learn_more": "/services/2",
+      "status": "online"
     },
     {
       "id": 3,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/7xCQzjVh/03.webp",
       "service_name": "Interview Preparation",
       "category": "Offline",
       "description": "Mock interviews and feedback to boost your confidence and improve your performance.",
-      "pricing": "$40 per session",
+      "pricing": "40 per session",
       "duration": "10-12-24 3-4pm",
       "counselor": "Mike Johnson",
       "rating": 4.9,
@@ -37,23 +39,24 @@
     },
     {
       "id": 4,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/xKSQBSMr/04.jpg",
       "service_name": "Freelancing Career Guide",
       "category": "Online",
       "description": "Comprehensive guide on starting and growing a freelancing career.",
-      "pricing": "$20 per guide",
+      "pricing": "20 per guide",
       "duration": "Self-paced",
       "counselor": "Sara Lee",
       "rating": 4.6,
-      "learn_more": "/services/4"
+      "learn_more": "/services/4",
+      "status": "online"
     },
     {
       "id": 5,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/GvBRSCV7/05.webp",
       "service_name": "Career Path Assessment",
       "category": "Group",
       "description": "A structured assessment to determine your best career path based on skills and interests.",
-      "pricing": "$25 per assessment",
+      "pricing": "25 per assessment",
       "duration": "15-12-24 6-7pm",
       "counselor": "David Brown",
       "rating": 4.5,
@@ -61,15 +64,16 @@
     },
     {
       "id": 6,
-      "image": "https://i.ibb.co/p4Kz3WH/Cracked-teeth.jpg",
+      "image": "https://i.ibb.co.com/cK5KKjKc/06.png",
       "service_name": "LinkedIn Profile Optimization",
       "category": "Online",
       "description": "Enhance your LinkedIn profile to attract more recruiters and networking opportunities.",
-      "pricing": "$35 per session",
+      "pricing": "35 per session",
       "duration": "Available Anytime",
       "counselor": "Emily White",
       "rating": 4.8,
-      "learn_more": "/services/6"
+      "learn_more": "/services/6",
+      "status": "online"
     }
   ]
   

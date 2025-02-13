@@ -1,42 +1,50 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
-// import Modal from "../Modal/Modal";
 
 const Details = () => {
     const { image, service_name, category, description, pricing, duration, counselor, rating } = useLoaderData();
-
-    const contextValue = useContext(authContext)
-    console.log(contextValue);
-
+    const contextValue = useContext(authContext);
+    
     return (
-        <div>
-            <div
-                className="hero min-h-screen"
-                style={{
-                    backgroundImage: `url(${image || 'https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp'})`,
-                }}
-            >
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-neutral-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">{service_name}</h1>
-                        <p className="mb-5">{description}</p>
-                        <p className="mb-5 text-start"><strong>Category:</strong> {category}</p>
-                        <p className="mb-5 text-start"><strong>Pricing:</strong> {pricing}</p>
-                        <p className="mb-5 text-start"><strong>Duration:</strong> {duration}</p>
-                        <p className="mb-5 text-start"><strong>Counselor:</strong> {counselor}</p>
-                        {/* <p className="mb-5 text-start"><strong>Rating:</strong> {rating}</p> */}
-                        <button  onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn btn-primary">Get Started</button>
-                    </div>
+        <div className="flex justify-center items-center min-h-screen p-6">
+            <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-2xl">
+                {/* Image */}
+                <div className="flex justify-center mb-4">
+                    <img
+                        src={image || 'https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp'}
+                        alt={service_name}
+                        className="w-64 h-40 object-cover rounded-md"
+                    />
+                </div>
+
+                {/* Details */}
+                <h1 className="text-3xl font-bold text-center mb-4">{service_name}</h1>
+                <p className="text-gray-700 text-center mb-4">{description}</p>
+
+                <div className="text-left space-y-2">
+                    <p><strong>Category:</strong> {category}</p>
+                    <p><strong>Pricing:</strong> {pricing}</p>
+                    <p><strong>Duration:</strong> {duration}</p>
+                    <p><strong>Counselor:</strong> {counselor}</p>
+                </div>
+
+                {/* Button */}
+                <div className="flex justify-center mt-6">
+                    <button 
+                        onClick={() => document.getElementById('my_modal_5').showModal()} 
+                        className="btn bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white px-6 py-2 rounded-lg shadow-md"
+                    >
+                        Get Started
+                    </button>
                 </div>
             </div>
-            {/* <Modal></Modal> */}
         </div>
     );
 };
 
 export default Details;
+
 
 
 

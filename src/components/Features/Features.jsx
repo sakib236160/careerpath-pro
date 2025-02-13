@@ -1,9 +1,16 @@
+import {  Briefcase, ClipboardList, GraduationCap, Headset, Presentation, Users } from "lucide-react";
+
 const Features = () => {
   return (
     <div className="max-w-screen-xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
         {/* Feature 1 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+
+        <div className="flex justify-center items-center mb-4">
+  <Users className="w-10 h-10 text-[#124E66]" />
+</div>
+
           <h2 className="text-2xl font-semibold mb-4">
             Personalized Counseling
           </h2>
@@ -15,6 +22,9 @@ const Features = () => {
 
         {/* Feature 2 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-center items-center mb-4">
+    <GraduationCap className="w-10 h-10 text-[#124E66]" />
+  </div>
           <h2 className="text-2xl font-semibold mb-4">Expert Guidance</h2>
           <p className="text-gray-600">
             Receive expert guidance from experienced counselors who have helped
@@ -24,6 +34,9 @@ const Features = () => {
 
         {/* Feature 3 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-center items-center mb-4">
+    <Presentation className="w-10 h-10 text-[#124E66]" />
+  </div>
           <h2 className="text-2xl font-semibold mb-4">Workshops & Webinars</h2>
           <p className="text-gray-600">
             Attend workshops and webinars on various topics, including interview
@@ -33,6 +46,9 @@ const Features = () => {
 
         {/* Feature 4 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-center items-center mb-4">
+    <Briefcase className="w-10 h-10 text-[#124E66]" />
+  </div>
           <h2 className="text-2xl font-semibold mb-4">
             Job Placement Assistance
           </h2>
@@ -44,6 +60,9 @@ const Features = () => {
 
         {/* Feature 5 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-center items-center mb-4">
+    <ClipboardList className="w-10 h-10 text-[#124E66]" />
+  </div>
           <h2 className="text-2xl font-semibold mb-4">Career Assessment</h2>
           <p className="text-gray-600">
             Take comprehensive career assessments to understand your strengths,
@@ -53,6 +72,9 @@ const Features = () => {
 
         {/* Feature 6 */}
         <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="flex justify-center items-center mb-4">
+    <Headset className="w-10 h-10 text-[#124E66]" />
+  </div>
           <h2 className="text-2xl font-semibold mb-4">Online Support</h2>
           <p className="text-gray-600">
             Access 24/7 online support for any career-related queries and
