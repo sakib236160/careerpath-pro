@@ -1,8 +1,7 @@
-# Career Counseling Website
+# Career Counseling Website/ Career-Path-Pro
 
 ## Live Site
-
-[Insert Live Site URL Here]
+    https://careerpath-pro.web.app/
 
 ## Overview
 
@@ -22,16 +21,16 @@ A career counseling platform providing personalized guidance, resume reviews, an
 * React.js, React Router
 * Firebase Authentication
 * JSON Data
-* Swiper.js, AOS Animation
+* Swiper.js, AOS Animation, Lucide-react, Framer Motion
 * Tailwind CSS
-* Netlify/Firebase Hosting
+* Firebase Hosting
 
 ## Installation
 
 * Clone the repository:  
-        git clone [Your Repo URL]
+        git clone https://github.com/programming-hero-web-course1/b10-a9-authentication-sakib236160.git
 * Navigate to the project directory:
-        cd career-counseling-website
+        cd career-path-pro
 * Install dependencies:
         npm install
 * Create a .env file with Firebase config:
@@ -42,10 +41,13 @@ A career counseling platform providing personalized guidance, resume reviews, an
         REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
         REACT_APP_FIREBASE_APP_ID=your_app_id
 * Start the development server:
-        npm start
+        npm run dev
+
+## GitHub Repo Link
+        https://github.com/programming-hero-web-course1/b10-a9-authentication-sakib236160
 
 ## Deployment
-        Hosted on [Netlify/Firebase Hosting].
+        Hosted on [Firebase Hosting].
         Ensure domain is added in Firebase authentication settings.
 
 ## Contact

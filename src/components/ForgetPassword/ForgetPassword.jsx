@@ -8,7 +8,7 @@ const ForgetPassword = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // URL থেকে email নিয়ে আসা
+ 
   const queryParams = new URLSearchParams(location.search);
   const initialEmail = queryParams.get("email") || "";
 
@@ -21,7 +21,6 @@ const ForgetPassword = () => {
     }
   }, [initialEmail]);
 
-  // Reset Password Function
   const handleResetPassword = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -36,7 +35,7 @@ const ForgetPassword = () => {
       await sendPasswordResetEmail(auth, email);
       toast.success("Reset link sent! Check your email.");
       setTimeout(() => {
-        window.location.href = "https://mail.google.com"; // Redirect to Gmail
+        window.location.href = "https://mail.google.com"; 
       }, 2000);
     } catch (error) {
       toast.error("Error: " + error.message);
@@ -47,22 +46,22 @@ const ForgetPassword = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-semibold text-center mb-4">
+      <div className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] p-8 rounded-lg shadow-lg w-96">
+        <h2 className="text-2xl font-semibold text-center mb-4 text-white">
           Forgot Password
         </h2>
         <form onSubmit={handleResetPassword} className="space-y-4">
-          <label className="block text-gray-600">Enter your Email:</label>
+          <label className="block text-white">Enter your Email:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
             required
           />
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+            className="btn bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white w-full rounded-full hover:opacity-90 transition"
             disabled={loading}
           >
             {loading ? "Sending..." : "Reset Password"}
