@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { authContext } from "../AuthProvider/AuthProvider";
 import { PhoneIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { user, handleLogout } = useContext(authContext);
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <nav className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
@@ -24,13 +26,47 @@ const Navbar = () => {
           </a>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <div className="flex items-center gap-2">
-              <PhoneIcon size={20} className="text-white" />
-              <a
-                href="tel:01780619346"
-                className="text-sm text-white dark:text-white hover:underline"
+              {/* Phone Icon Bounce Animation */}
+              <motion.div
+                animate={{ y: [0, -5, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 0.6,
+                  ease: "easeInOut",
+                }}
               >
-                (+88) 01780-619346
-              </a>
+                <PhoneIcon size={20} className="text-white" />
+              </motion.div>
+
+              {/* Phone Number with Marquee Effect */}
+              <div
+                className="relative w-[150px] overflow-hidden"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <motion.div
+                  className="whitespace-nowrap flex"
+                  animate={isHovered ? {} : { x: ["0%", "-100%"] }}
+                  transition={
+                    isHovered
+                      ? {}
+                      : { repeat: Infinity, duration: 5, ease: "linear" }
+                  }
+                >
+                  <a
+                    href="tel:01780619346"
+                    className="text-sm text-white hover:underline mr-6"
+                  >
+                    (+88) 01780-619346
+                  </a>
+                  <a
+                    href="tel:01780619346"
+                    className="text-sm text-white hover:underline"
+                  >
+                    (+88) 01780-619346
+                  </a>
+                </motion.div>
+              </div>
             </div>
             {user?.email ? (
               <div className="relative group items-center gap-4 flex">

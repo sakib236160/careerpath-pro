@@ -56,7 +56,7 @@ const MyProfile = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-[#1E293B] text-white rounded-lg shadow-md mt-10">
+    <div className="max-w-lg mx-auto p-6 bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white rounded-lg shadow-md mt-10">
       <ToastContainer position="top-right" autoClose={3000} />
       
       <div className="text-center">
@@ -90,7 +90,7 @@ const MyProfile = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 mt-4 rounded transition"
+          className="w-full  bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 mt-4 rounded transition"
           disabled={loading}
         >
           {loading ? "Updating..." : "Update Profile"}

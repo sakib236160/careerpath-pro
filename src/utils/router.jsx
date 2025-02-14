@@ -9,6 +9,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import NotFound from "../components/NotFound/NotFound";
+import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+            {
+                path: '/forget-password', // Forget Password Page Route
+                element: <ForgetPassword></ForgetPassword>
+            }
         ]
     },
     {

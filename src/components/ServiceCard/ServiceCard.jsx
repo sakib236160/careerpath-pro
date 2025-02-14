@@ -8,12 +8,6 @@ const ServiceCard = ({ service }) => {
     <div className="card bg-white shadow-lg border border-gray-200 rounded-2xl overflow-hidden mt-12 transition-all hover:shadow-xl hover:-translate-y-1">
       <figure className="relative">
         <img src={image} alt={service_name} className="w-full h-48 object-cover" />
-        {/* Status Indicator */}
-        {/* <span
-          className={`absolute top-3 right-3 w-4 h-4 rounded-full ${
-            status === "online" ? "bg-green-500" : "bg-blue-500"
-          } border-2 border-white shadow-md`}
-        ></span> */}
       </figure>
       <div className="card-body p-6">
         <h2 className="card-title text-xl font-bold text-gray-800">{service_name}</h2>
@@ -23,7 +17,7 @@ const ServiceCard = ({ service }) => {
             size={14}
             fill="currentColor"
             className={`${
-              status === "online" ? "text-green-500" : "text-blue-500"
+              status === "online" ? "text-green-500" : "text-gray-500"
             }`}
           />
         </p>

@@ -239,7 +239,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E88A8] text-white bg-transparent"
+              className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
               name="name"
               required
             />
@@ -250,7 +250,7 @@ const Register = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E88A8] text-white bg-transparent"
+              className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
               name="image"
               required
             />
@@ -261,7 +261,7 @@ const Register = () => {
             </label>
             <input
               type="email"
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E88A8] text-white bg-transparent"
+              className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
               name="email"
               required
             />
@@ -273,7 +273,7 @@ const Register = () => {
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E88A8] text-white bg-transparent"
+                className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
                 name="password"
                 required
               />
@@ -293,7 +293,7 @@ const Register = () => {
             <div className="relative">
               <input
                 type={showConfirmPassword ? "text" : "password"}
-                className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E88A8] text-white bg-transparent"
+                className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
                 name="conPassword"
                 required
               />
@@ -308,7 +308,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white p-3 rounded-lg hover:opacity-90"
+            className="btn bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white w-full rounded-full hover:opacity-90 transition"
           >
             Sign Up
           </button>
@@ -316,14 +316,14 @@ const Register = () => {
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
         <p className="text-center mt-4 text-white">
           Already have an account?{" "}
-          <Link to="/login" className="text-[#1E88A8] hover:underline">
+          <Link to="/login" className="btn bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white w-full rounded-full hover:opacity-90 transition">
             Log In
           </Link>
         </p>
         <div className="mt-6">
           <button
             onClick={handleGoogleLogin}
-            className="w-full bg-white text-[#124E66] p-3 rounded-lg border-2 border-[#124E66] hover:bg-[#124E66] hover:text-white"
+            className="btn btn-outline w-full mt-6 text-[#124E66] border-[#124E66] rounded-full hover:bg-[#124E66] hover:text-white transition"
           >
             Sign Up with Google
           </button>
