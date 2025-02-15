@@ -40,6 +40,11 @@ A career counseling platform providing personalized guidance, resume reviews, an
         REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
         REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
         REACT_APP_FIREBASE_APP_ID=your_app_id
+
+* custom action URL applies to all email templates
+        Live project: https://careerpath-pro.web.app/reset-password
+        LocalHost :http://localhost:5173/reset-password
+
 * Start the development server:
         npm run dev
 
@@ -51,5 +56,5 @@ A career counseling platform providing personalized guidance, resume reviews, an
         Ensure domain is added in Firebase authentication settings.
 
 ## Contact
-        For queries, reach out to [Phone: +88 01780-619346, Email:hossainsakib965@gmail.com].
+        For queries, reach out to [Email:hossainsakib965@gmail.com].  
 
