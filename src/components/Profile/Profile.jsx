@@ -18,7 +18,6 @@ const MyProfile = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Validation Check
     if (!name.trim()) {
       toast.error("Name cannot be empty!");
       setLoading(false);

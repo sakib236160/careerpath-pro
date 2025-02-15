@@ -1,42 +1,35 @@
-import { useState, useEffect } from "react";
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { useState } from "react";
+import { getAuth, confirmPasswordReset } from "firebase/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const ForgetPassword = () => {
+const ResetPassword = () => {
   const auth = getAuth();
   const navigate = useNavigate();
   const location = useLocation();
-
- 
   const queryParams = new URLSearchParams(location.search);
-  const initialEmail = queryParams.get("email") || "";
+  const oobCode = queryParams.get("oobCode"); // Firebase reset code
 
-  const [email, setEmail] = useState(initialEmail);
+  const [newPassword, setNewPassword] = useState("");
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (initialEmail) {
-      setEmail(initialEmail);
-    }
-  }, [initialEmail]);
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    if (!email) {
-      toast.error("Please enter a valid email!");
+    if (!oobCode || !newPassword) {
+      toast.error("Invalid request or empty password!");
       setLoading(false);
       return;
     }
 
     try {
-      await sendPasswordResetEmail(auth, email);
-      toast.success("Reset link sent! Check your email.");
+      await confirmPasswordReset(auth, oobCode, newPassword);
+      toast.success("Password reset successfully!");
+
       setTimeout(() => {
-        window.location.href = "https://mail.google.com"; 
-      }, 2000);
+        navigate("/login"); // Reset successful হলে login page-এ পাঠানো হবে
+      }, 3000);
     } catch (error) {
       toast.error("Error: " + error.message);
     }
@@ -48,14 +41,14 @@ const ForgetPassword = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-gradient-to-r from-[#124E66] to-[#1E88A8] p-8 rounded-lg shadow-lg w-96">
         <h2 className="text-2xl font-semibold text-center mb-4 text-white">
-          Forgot Password
+          Reset Your Password
         </h2>
         <form onSubmit={handleResetPassword} className="space-y-4">
-          <label className="block text-white">Enter your Email:</label>
+          <label className="block text-white">Enter New Password:</label>
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
             className="input input-bordered w-full p-3 rounded-xl focus:ring-2 focus:ring-[#124E66] bg-transparent text-white border-white"
             required
           />
@@ -64,7 +57,7 @@ const ForgetPassword = () => {
             className="btn bg-gradient-to-r from-[#124E66] to-[#1E88A8] text-white w-full rounded-full hover:opacity-90 transition"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Reset Password"}
+            {loading ? "Resetting..." : "Reset Password"}
           </button>
         </form>
       </div>
@@ -72,6 +65,4 @@ const ForgetPassword = () => {
   );
 };
 
-export default ForgetPassword;
-
-
+export default ResetPassword;
