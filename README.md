@@ -28,7 +28,7 @@ A career counseling platform a providing personalized guidance, resume reviews, 
 ## Installation
 
 * Clone the repository:  
-        git clone https://github.com/programming-hero-web-course1/b10-a9-authentication-sakib236160.git
+        git clone https://github.com/sakib236160/careerpath-pro.git
 * Navigate to the project directory:
         cd career-path-pro
 * Install dependencies:
