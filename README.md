@@ -5,7 +5,7 @@
 
 ## Overview
 
-A career counseling platform providing personalized guidance, resume reviews, and counseling sessions. Built with React, React Router, and Firebase.
+A career counseling platform a providing personalized guidance, resume reviews, and counseling sessions. Built with React, React Router, and Firebase.
 
 ## Features
 
